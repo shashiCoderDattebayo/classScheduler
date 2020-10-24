@@ -13,7 +13,7 @@ import javax.xml.bind.annotation.XmlRootElement;
  * a simple domain entity doubling as a DTO
  */
 @Entity
-@Table(name = "hotel")
+@Table(name = "students")
 @XmlRootElement
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Student {
@@ -26,21 +26,14 @@ public class Student {
     private String name;
 
     @Column()
-    private String description;
-
-    @Column()
-    String city;
-
-    @Column()
-    private int rating;
+    private String email;
 
     public Student() {
     }
 
-    public Student(String name, String description, int rating) {
+    public Student(String name, String email) {
         this.name = name;
-        this.description = description;
-        this.rating = rating;
+        this.email = email;
     }
 
     public long getId() {
@@ -60,38 +53,20 @@ public class Student {
         this.name = name;
     }
 
-    public String getDescription() {
-        return description;
+    public String getEmail() {
+        return email;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    public int getRating() {
-        return rating;
-    }
-
-    public void setRating(int rating) {
-        this.rating = rating;
-    }
-
-    public String getCity() {
-        return city;
-    }
-
-    public void setCity(String city) {
-        this.city = city;
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     @Override
     public String toString() {
-        return "Hotel {" +
+        return "Student{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
-                ", description='" + description + '\'' +
-                ", city='" + city + '\'' +
-                ", rating=" + rating +
+                ", email='" + email + '\'' +
                 '}';
     }
 }

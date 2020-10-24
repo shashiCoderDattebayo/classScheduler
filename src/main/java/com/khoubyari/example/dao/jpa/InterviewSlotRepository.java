@@ -1,16 +1,17 @@
 package com.khoubyari.example.dao.jpa;
 
-import com.khoubyari.example.domain.Interviewer;
+import com.khoubyari.example.domain.InterviewSlot;
 import com.khoubyari.example.domain.Student;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.repository.PagingAndSortingRepository;
 
+import java.util.List;
+
 /**
  * Repository can be used to delegate CRUD operations against the data source: http://goo.gl/P1J8QH
  */
-public interface InterviewerRepository extends PagingAndSortingRepository<Interviewer, Long> {
-    Interviewer findInterviewerById(long id);
-    Interviewer findInterviewerByName(String name);
+public interface InterviewSlotRepository extends PagingAndSortingRepository<InterviewSlot, Long> {
+    List<InterviewSlot> findAllInterviewSlotsByInterviewerId(long id);
     Page findAll(Pageable pageable);
 }

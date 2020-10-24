@@ -64,7 +64,7 @@ Content-Type: application/json
 
 {
 "name" : "Beds R Us",
-"description" : "Very basic, small rooms but clean",
+"email" : "Very basic, small rooms but clean",
 "city" : "Santa Ana",
 "rating" : 2
 }
@@ -91,7 +91,7 @@ Content-Type: application/json
 
 {
 "name" : "Beds R Us",
-"description" : "Very basic, small rooms but clean",
+"email" : "Very basic, small rooms but clean",
 "city" : "Santa Ana",
 "rating" : 3
 }
